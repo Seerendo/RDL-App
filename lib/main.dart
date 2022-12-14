@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
         title: 'Flutter Demo',
         theme: ThemeData(
           primarySwatch: Colors.blue,
+          appBarTheme: const AppBarTheme(color: Colors.indigo),
         ),
         home: HomeView());
   }

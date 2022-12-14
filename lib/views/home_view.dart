@@ -23,12 +23,45 @@ class _GridWidget extends StatelessWidget {
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
       ),
-      children: const [
-        _CardWidget(widgetInput: Center(child: Text('Físico Químicas'))),
+      children: [
         _CardWidget(
-            widgetInput: Center(child: Text('Sensoriales/Funcionales'))),
-        _CardWidget(widgetInput: Center(child: Text('Microbiológicos'))),
-        _CardWidget(widgetInput: Center(child: Text('Contaminantes'))),
+            widgetInput: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ClipRRect(
+              borderRadius: BorderRadius.circular(20),
+              child: const FadeInImage(
+                placeholder: AssetImage('assets/loading.gif'),
+                image: AssetImage('assets/visualizar.png'),
+                height: 100,
+                width: 100,
+              ),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            const Center(child: Text('Especificaciones')),
+          ],
+        )),
+        _CardWidget(
+            widgetInput: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ClipRRect(
+              borderRadius: BorderRadius.circular(20),
+              child: const FadeInImage(
+                placeholder: AssetImage('assets/loading.gif'),
+                image: AssetImage('assets/crear.png'),
+                height: 100,
+                width: 100,
+              ),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            const Center(child: Text('Crear Especificación')),
+          ],
+        )),
       ],
     );
   }
